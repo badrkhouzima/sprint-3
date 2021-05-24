@@ -1,0 +1,37 @@
+<html>
+    <body>
+        
+<P>1st number</P><input type="text" id="num1"><br>
+<p>2nd number</p><input type="text" id="num2"><br>
+<p>what operation you want to make</p><input type="text" id="char"><br><br>
+<input type="button" onclick="resultado()" value="Click Me">
+<p id="show"></p>
+</body>
+
+
+<script>
+  function resultado(operador, valor1, valor2){
+  var valor1= Number(document.getElementById("num1").value);
+  var valor2= Number(document.getElementById("num2").value);
+  var operador= document.getElementById("char").value;
+  var resultat="";
+    if(operador == "+"){
+        resultat= valor1+valor2;
+        
+    }
+    if( operador == "-"){
+      resultat= valor1-valor2;
+    }
+    if( operador == "*"){
+      resultat= valor1*valor2;
+    }
+    if( operador == "/"){
+      resultat= valor1/valor2;
+    }
+    document.getElementById("show").innerHTML = resultat;
+
+   
+}
+    
+</script>
+</html>
