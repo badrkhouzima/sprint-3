@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--- El codigo coge la nota desde el input--->
+    <input id="note" type="text" placeholder="write a note">
+    <input type="button" onclick="myfunction()" value="Click here">
+    <p id="show"></p>
+
+    <script>
+        //el codi executir la funcion con el click
+        function myfunction(){
+        let note = Number(document.getElementById("note").value);
+        let txt="";
+        if(note>=10){
+            alert("congratulations, you have been passed.");
+            txt= "congratulations, you have been passed."
+        }else{
+            alert("Sorry, you failed to pass the exam with: "+note);
+            txt= "Sorry, you failed to pass the exam with: "+note;
+        }
+        document.getElementById("show").innerHTML=txt;
+        }
+     
+    </script>
+</body>
+</html>
